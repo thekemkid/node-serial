@@ -1,7 +1,7 @@
 Serial
 ====
 
-Serial is a Node.JS module to serially run asynchronous functions.
+Serial is a Node.JS module to serially/sequentially run asynchronous functions.
 
 
 Usage
