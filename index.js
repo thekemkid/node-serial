@@ -1,1 +1,1 @@
-exports = require("./lib/Serial.js");
+module.exports = require("./lib/Serial.js");
