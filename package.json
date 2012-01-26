@@ -1,8 +1,8 @@
 {
     "name"                      : "serial",
     "description"               : "Serial runner for asynchronous functions",
-    "version"                   : "0.0.1",
-    "author"                    : "Nicolas Herment <nherment@modeln.com>",
+    "version"                   : "0.0.2",
+    "author"                    : "Nicolas Herment <nherment@gmail.com>",
     "private"                   : false,
     "contributors": [
     ],
@@ -14,7 +14,7 @@
     "scripts": {
         "test"                  : "mocha"
     },
-    "keywords"                  : ["serial", "asynchronous", "chain"],
+    "keywords"                  : ["serial", "asynchronous", "chain", "sequential"],
     "repository"                : "https://github.com/nherment/node-serial",
     "main"                      : "index"
 }
