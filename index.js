@@ -1,1 +1,8 @@
-module.exports = require("./lib/Serial.js");
+
+module.exports = {
+
+    SerialRunner        : require("./lib/SerialRunner"),
+
+    ParallelRunner      : require("./lib/ParallelRunner")
+
+}
