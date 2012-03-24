@@ -35,11 +35,15 @@ describe("When running tasks parallely", function() {
 
             }
 
+            var sum = 0;
+
             for(var j = 0 ; j < numCallback ; j++) {
 
-                results[j][0].should.equal(j)
+                sum += results[j][0]
 
             }
+
+            sum.should.equal(9+8+7+6+5+4+3+2+1)
 
             done();
         });
