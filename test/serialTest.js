@@ -27,4 +27,16 @@ describe("When running tasks sequentially", function() {
         });
 
     });
+
+    it(", not queuing any function should be valid", function(done) {
+
+        var r = new SerialRunner();
+
+        r.run(function() {
+
+            done();
+
+        });
+
+    });
 });

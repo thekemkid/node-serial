@@ -49,4 +49,16 @@ describe("When running tasks parallely", function() {
         });
 
     });
+
+    it(", not queuing any function should be valid", function(done) {
+
+        var r = new ParallelRunner();
+
+        r.run(function() {
+
+            done();
+
+        });
+
+    });
 });

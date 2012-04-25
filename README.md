@@ -3,9 +3,13 @@ Serial
 
 Serial is a Node.JS module to serially/sequentially run asynchronous functions.
 
+It also includes a Parallel runner to simultaneously run asynchronous functions.
 
 Usage
 ====
+
+SerialRunner
+------------
     var SerialRunner = require("serial").SerialRunner;
     var runner = new SerialRunner();
     
@@ -21,6 +25,25 @@ Usage
         // do smthg
         callback();
     }
+
+Parallel Runner
+---------------
+    var ParallelRunner = require("serial").ParallelRunner;
+    var runner = new ParallelRunner();
+
+    runner.add(function1, param1).add(function2, param2);
+    runner.add(function3, param3);
+
+    runner.run(function() {
+        console.log("done");
+    });
+
+
+    function function1(param, callback) {
+        // do smthg
+        callback();
+    }
+
 
 MIT License
 ===========
