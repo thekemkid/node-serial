@@ -15,6 +15,11 @@ SerialRunner
     
     runner.add(function1, param1).add(function2, param2);
     runner.add(function3, param3);
+
+    runner.onError(function(err) {
+        runner.stop(); // stop further queued function from being run
+        console.log("There was an error");
+    });
     
     runner.run(function() {
         console.log("done");
@@ -23,7 +28,13 @@ SerialRunner
 
     function function1(param, callback) {
         // do smthg
-        callback();
+
+        if("something went wrong") {
+            var err = new Error("something went wrong");
+            callback(err);
+        } else {
+            callback();
+        }
     }
 
 Parallel Runner
