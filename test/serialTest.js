@@ -50,7 +50,7 @@ describe("When running tasks sequentially", function() {
 
         r.onError(function(err) {
             r.stop()
-            done()
+            setTimeout(done, 1000)
         })
 
         r.run(function() {
