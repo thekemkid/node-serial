@@ -1,7 +1,7 @@
 {
     "name"                      : "serial",
     "description"               : "Serial and parallel runner for asynchronous functions",
-    "version"                   : "0.0.5",
+    "version"                   : "0.0.6",
     "author"                    : "Nicolas Herment <nherment@gmail.com>",
     "private"                   : false,
     "contributors": [
