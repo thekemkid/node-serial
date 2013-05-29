@@ -81,4 +81,25 @@ describe("When running tasks sequentially", function() {
         })
 
     })
+
+    it(", an unhandled error should bubble to the error handler", function(done) {
+
+        var r = new SerialRunner()
+
+        r.add(function(callback) {
+            throw new Error("this error should rise to the error handler")
+        })
+
+        r.onError(function(err) {
+            r.stop()
+            setTimeout(done, 1000)
+        })
+
+        r.run(function() {
+
+            should.fail("The end callback should not be called when an error is catched")
+
+        })
+
+    })
 })
