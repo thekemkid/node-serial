@@ -1,8 +1,8 @@
 
 module.exports = {
 
-    SerialRunner        : require("./lib/SerialRunner"),
+  SerialRunner    : require("./lib/SerialRunner"),
 
-    ParallelRunner      : require("./lib/ParallelRunner")
+  ParallelRunner    : require("./lib/ParallelRunner")
 
 }

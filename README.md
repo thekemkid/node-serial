@@ -10,50 +10,50 @@ Usage
 
 SerialRunner
 ------------
-    var SerialRunner = require("serial").SerialRunner;
-    var runner = new SerialRunner();
-    
-    runner.add(function1, param1).add(function2, param2);
-    runner.add(function3, param3);
+  var SerialRunner = require("serial").SerialRunner;
+  var runner = new SerialRunner();
+  
+  runner.add(function1, param1).add(function2, param2);
+  runner.add(function3, param3);
 
-    runner.onError(function(err) {
-        runner.stop(); // stop further queued function from being run
-        console.log("There was an error");
-    });
-    
-    runner.run(function() {
-        console.log("done");
-    });
+  runner.onError(function(err) {
+    runner.stop(); // stop further queued function from being run
+    console.log("There was an error");
+  });
+  
+  runner.run(function() {
+    console.log("done");
+  });
 
 
-    function function1(param, callback) {
-        // do smthg
+  function function1(param, callback) {
+    // do smthg
 
-        if("something went wrong") {
-            var err = new Error("something went wrong");
-            callback(err);
-        } else {
-            callback();
-        }
+    if("something went wrong") {
+      var err = new Error("something went wrong");
+      callback(err);
+    } else {
+      callback();
     }
+  }
 
 Parallel Runner
 ---------------
-    var ParallelRunner = require("serial").ParallelRunner;
-    var runner = new ParallelRunner();
+  var ParallelRunner = require("serial").ParallelRunner;
+  var runner = new ParallelRunner();
 
-    runner.add(function1, param1).add(function2, param2);
-    runner.add(function3, param3);
+  runner.add(function1, param1).add(function2, param2);
+  runner.add(function3, param3);
 
-    runner.run(function() {
-        console.log("done");
-    });
+  runner.run(function() {
+    console.log("done");
+  });
 
 
-    function function1(param, callback) {
-        // do smthg
-        callback();
-    }
+  function function1(param, callback) {
+    // do smthg
+    callback();
+  }
 
 
 MIT License
